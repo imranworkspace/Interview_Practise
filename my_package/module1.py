@@ -1,4 +1,2 @@
-def add():
-    return "hi imran"
-
-add()
+def add(x,y):
+    return x+y

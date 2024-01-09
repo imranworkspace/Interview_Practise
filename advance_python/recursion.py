@@ -1,0 +1,3 @@
+def recursion():
+    recursion()
+recursion()

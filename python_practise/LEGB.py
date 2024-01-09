@@ -1,9 +1,10 @@
 from math import pi
-pi='global'
-def enclose():
-    pi='enclose'
+# pi=3.14
+def enclosing():
+    # pi=3.144
     def local():
-        pi='local'
+        # pi=3.1444
         print(pi)
     local()
-enclose()
+enclosing()
+    
