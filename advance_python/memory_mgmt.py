@@ -32,6 +32,8 @@ z1=5
 print(id(x1))
 print(id(y1))
 print(id(z1))
-140714882316856
-140714882316856
-140714882316856
+# here x1,y1 and z1 point to the same object so in stack all three values ara available and 5 available into private heap 
+# 140714882316856
+# 140714882316856
+# 140714882316856
+
