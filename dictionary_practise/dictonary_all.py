@@ -31,7 +31,7 @@ print(type(mydict))
 mydict[0]='imran'
 mydict[1]='irfan'
 mydict[2]='muskan'
-mydict['emp_ages']=(30,27,24)
+mydict[4]=(30,27,24)
 print(mydict)
 print(type(mydict))
 
@@ -98,7 +98,9 @@ print('type ',type(mydict))
 
 print('update method')
 mydict.update({1:'myupdate'})
-print(mydict)
+mydict.update({0:'mysorted'})
+print('sorted method')
+print(sorted(mydict))
 print('------------------------')
 
 mydict2 = mydict.copy()
@@ -127,3 +129,14 @@ print('list_of_keys ',list_of_keys)
 
 list_of_values = list(mydict.values())
 print('list_of_values ',list_of_values)
+
+print()
+print()
+print('---------popitem---------------')
+mydict.update({5:'afreen'})
+print(mydict)
+
+print('---------popitem performed---------------')
+mydict.popitem()
+print('removed lastest inserted item from dictionary by popitem() without any arguments')
+print(mydict)
