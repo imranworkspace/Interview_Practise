@@ -35,6 +35,9 @@ mydict[4]=(30,27,24)
 print(mydict)
 print(type(mydict))
 
+# get function
+print('get() by passing key to fun ')
+print('get item ',mydict.get(1))       
 # Updating existing Key's Value       
 print(mydict)
 print(type(mydict))
