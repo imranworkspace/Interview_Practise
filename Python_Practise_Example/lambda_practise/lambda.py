@@ -17,3 +17,14 @@ map_obj = list(map(lambda s:s[0]=='a',fruits))
 print(map_obj)
 print(filter_obj)
 
+#Code to calculate square of each number of lists using list comprehension    
+squares = [lambda num = num: num ** 2 for num in range(0, 11)]       
+
+cube_lambda_lst_comp = [lambda num=num: num**3 for num in range(1,11)]
+for square in cube_lambda_lst_comp:    
+       print('',square(), end = " ") 
+print()
+print()
+sqr_lambda_lst_cmp = [lambda num=num: num ** 2 for num in range(1,11)]
+for sqr in sqr_lambda_lst_cmp:
+    print('',sqr(),end=' ')
