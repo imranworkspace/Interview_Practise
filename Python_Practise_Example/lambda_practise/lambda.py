@@ -28,3 +28,15 @@ print()
 sqr_lambda_lst_cmp = [lambda num=num: num ** 2 for num in range(1,11)]
 for sqr in sqr_lambda_lst_cmp:
     print('',sqr(),end=' ')
+
+print()
+print('--------------------')
+
+max_val = lambda x,y: x if x>y else y
+print(max_val(10,2))
+
+print('palindrome using lambda fun')
+name = input('enter your name : ')
+
+pali=lambda n: 'palindrome' if n==name[::-1] else "not palindrome"
+print(pali(name))
