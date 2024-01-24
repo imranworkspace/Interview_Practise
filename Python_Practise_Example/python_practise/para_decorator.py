@@ -1,24 +1,21 @@
-def decorator_fun(func):
-    def wrapper_fun(*args, **kwargs):
-        print('wrapper fun worked')
-        add = kwargs.get('x', 0) + kwargs.get('y', 0)
+def decor_fun(func):
+    def wrapper_fun(a, b):
+        add = a + b
         print(add)
-        return func(*args, **kwargs)
+        return func()
 
-    print('decorator fun worked')
+    print('main fun called')
     return wrapper_fun
 
 def show():
-    print('show fun worked')
-    print('--------------')
+    print('show fun called')
 
-# Using the decorator without @ syntax
-decorator_show = decorator_fun(show)
-decorator_show()
+decor_show = decor_fun(show)
+decor_show(20, 30)
+print()
 
-@decorator_fun
-def display(x,y):
-    print('disp fun worked')
+@decor_fun
+def display():
+    print('display fun called')
 
-# You can pass additional arguments to the decorator using keyword arguments
-display(x=1, y=2)
+display(20, 30)
