@@ -8,7 +8,6 @@ def decor_fun(func):
 
 def show():
     print('show fun called')
-
 decor_show = decor_fun(show)
 decor_show(20, 30)
 
