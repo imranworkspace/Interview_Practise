@@ -6,6 +6,10 @@ def handle(arr_val):
     print(f'execution completed {arr_val[0]}')
 
 if __name__=="__main__":
-    arr_val =(['V',1],['X',2],['y',15],['R',5],['S',4])
+    start_time = time.time()
+    arr_val =(['V',1],['X',22],['y',15],['R',5],['S',4])
     p = Pool(3)
     p.map(handle,arr_val)
+    end_time = time.time()
+    end = end_time - start_time
+    print('total time ',(end))
