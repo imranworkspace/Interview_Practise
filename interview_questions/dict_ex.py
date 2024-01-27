@@ -6,6 +6,5 @@ def list_to_dict(new_list):
         else:
             d[key]=value
     return d
-
 new_list = [(5, 'a'), (2, 'b'), (3, 'c'), (5, 'ab')]
 print(list_to_dict(new_list))
