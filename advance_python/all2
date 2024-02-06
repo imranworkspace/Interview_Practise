@@ -130,3 +130,16 @@ def fact3(n):
 print(f'fact of {n} is {fact(n)}')
 print(f'fact of {n} is {fact2(n)}')
 print(f'fact of {n} is {fact3(n)}')
+
+def list_to_dict(new_list):
+    d={}
+    for key,value in new_list:
+        if key not in new_list:
+            d[key]=value
+        else:
+            d[key]=value
+    return d
+
+new_list = [(5, 'a'), (2, 'b'), (3, 'c'), (5, 'ab')]
+# expected {5: 'ab', 2: 'b', 3: 'c'}
+print(list_to_dict(new_list))
