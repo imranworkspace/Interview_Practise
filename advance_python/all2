@@ -1,0 +1,132 @@
+# reverse list by recursion
+def r_lst(l):
+    if len(l)==0:
+        return []
+    return [l[-1]] + r_lst(l[:-1])
+    
+l=[7,8,9]
+print(r_lst(l))
+# reverse list by recursion without re
+def rev_2(l2):
+    rev_lst_ex=[]
+    if len(l2)==0:
+        return []
+    else:
+        for element in l2:
+            rev_lst_ex=[element]+rev_lst_ex
+    return rev_lst_ex
+l2=[4,5,6]
+print(rev_2(l2))
+# reverse str
+def rev_str1(name):
+    return name[::-1]
+name="imran"
+print(rev_str1(name))
+# reverse str without slicing
+def rev_str2(name2):
+    r_str=''.join(reversed(name2))
+    return r_str
+name2="imran"
+print(rev_str2(name2))
+# reverse number 
+def rev_num(n):
+    rev_n=0
+    while n>0:
+        remainder = n%10
+        rev_n=(rev_n*10)+remainder
+        n=n//10
+    return rev_n
+n=321
+print(rev_num(n))
+# palindrom string,name
+def pali(name3):
+    if len(name3):
+        return ''
+    return name3==name[::-1]
+name3="imran"
+p = pali(name3)
+if p:
+    print(f'{name3} palindrom')
+else:
+    print(f'{name3} not palindrom')
+    
+# fibonaccie series
+n=5
+count,n1,n2=0,0,1
+while count<n:
+    print(n1)
+    n1,n2=n2,n1+n2
+    count+=1
+# rev string withour reverse and recursion
+def str_rev(name4):
+    str_temp=''
+    for s in name4:
+        str_temp=s+str_temp
+    return str_temp
+name4="irfan"
+print(str_rev(name4))
+
+#armstrong
+def arm(n):
+    num_digit=str(n)
+    len_digit=len(num_digit)
+    arm=sum(int(digit) ** len_digit for digit in num_digit)
+    if arm==n:
+        print(f'{n} is armstrong number')
+    else:
+        print(f'{n} is not armstrong number')
+        
+n=153
+arm(n)
+
+for i in range(2,101):
+    for j in range(2,101):
+        if i%j==0:
+            break
+    if i==j:
+        print(i)
+# find second largest number 
+lst5=[8,3,7,98,105,126]
+lst5.sort()
+print(lst5)
+lst5.reverse()
+print(lst5)
+sorted_lst = sorted(lst5,reverse=True)
+print(sorted_lst[1])
+
+#####
+def lst_to_dct(lst):
+    d=dict()
+    for key,item in enumerate(lst,start=200):
+        if isinstance(item,list):
+            d[key]=lst_to_dct(item)
+        else:
+            d[key]=item
+    return d
+lst = ['a','b',['e','f'],'g',['h']]
+# expected from above list 
+# dict = {0:'a',1:'b',2:{0:'e',1:'f'},3:'g',4:{0:'h'}}
+print(lst_to_dct(lst))
+
+# factorial 
+def fact(n):
+    if n==1:
+        return 1
+    return n*(fact(n-1))
+n=5
+from math import factorial
+def fact2(n):
+    if n==1:
+        return 1
+    return factorial(n)
+
+def fact3(n):
+    my_factorial=1
+    while n>0:
+        my_factorial=my_factorial*n
+        n=n-1
+    return my_factorial
+
+print(f'fact of {n} is {fact(n)}')
+print(f'fact of {n} is {fact2(n)}')
+print(f'fact of {n} is {fact3(n)}')
