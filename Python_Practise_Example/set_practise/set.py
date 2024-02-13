@@ -4,7 +4,7 @@ months = set(["January","February", "March", "April", "May", "June"])
 # months.discard("January");    
 # months.discard("Imran");    
 
-# remove() not raised an error if item is avaialble or not 
+# remove() raised an error if item is avaialble or not 
 # raised an error KeyError: 'January'
 # months.remove("January");    
 # months.remove("Imran");    
