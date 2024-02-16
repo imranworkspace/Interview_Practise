@@ -153,4 +153,15 @@ print(n[1])
 
 # expected 56
 
+########### regular expression example
+passage="Amidst this tranquil scene, a lone figure emerged from the shadows, moving with silent determination. It was a young adventurer, his eyes alight with curiosity and his spirit fueled by the promise of discovery. With each step, he ventured deeper into the wilderness, drawn by the mysteries that lay hidden within its depths."
+import re
+pattern="his"
+match_found = re.findall(pattern,passage)
+print(match_found)
+print(len(match_found))
+
+## output : 
+# ['his', 'his', 'his']
+# 3
 
