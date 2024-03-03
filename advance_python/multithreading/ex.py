@@ -33,15 +33,13 @@ def func(n):
 # time2=time.perf_counter()
 # print(time2-time1)
 #--------------------------------------------------------
-def pooling_thread():
+if __name__=="__main__":
+    time1=time.perf_counter()
     with ThreadPoolExecutor() as executor:
         # multiple files or urls download from internet or application I can do it using below with with ThreadPoolExecutor
         timer_lst =[10,4,2,1]
         results = executor.map(func,timer_lst)
         for result in results:
             print(result)
-
-time1=time.perf_counter()
-pooling_thread()
-time2=time.perf_counter()
-print(time2-time1)
+    time2=time.perf_counter()
+    print(time2-time1)
