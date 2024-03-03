@@ -165,3 +165,70 @@ print(len(match_found))
 # ['his', 'his', 'his']
 # 3
 
+name="Imran@123"
+d,s,a=0,0,0
+for st in name:
+    if st.isdigit():
+        d+=1
+    elif st.isalpha():
+        a+=1
+    else:
+        s+=1
+print(d,s,a)
+
+print()
+tuple1 = ("Orange", [10, 20, 30], (5, 15, 25))
+a,b,c=tuple1
+print(a)
+print(b)
+print(c)
+
+print()
+
+
+#swap tuple
+tupl1=(11,99)
+tupl2=(88,44)
+tupl2,tupl1=tupl1,tupl2
+print(tupl2)
+print(tupl1)
+print()
+# Get Only unique items from two sets
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+print(set1.union(set2))
+print(set1.intersection(set2))
+print(set1.difference(set2))
+print(set1.difference_update(set2))
+print()
+print()
+
+d = {1:'imran',2:'irfan'}
+print(d.keys())
+print(d.values())
+print(d.items())
+print(max(d.values()))
+print(max(d.items()))
+print()
+print()
+
+d2,d3,d4={},{},{}
+d4=d
+d2=d
+d3=d.copy()
+
+d2.pop(1)
+print(d2)
+print(d)
+
+d4=d3.copy()
+d4.pop(1)
+print('d4')
+print(d4)
+print(d3)
+
+d3.update({3:'muskan'})
+print(d3)
+
+d3.popitem()
+print(d3)
