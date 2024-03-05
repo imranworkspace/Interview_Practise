@@ -1,17 +1,20 @@
-def decor_fun(func):
-    def wrapper_fun(a, b):
-        add = a + b
-        print(add)
+import time
+def main(func):
+    def wrapper(t):
+        s=time.perf_counter()
+        time.sleep(t)
+        print(f'{func.__name__} worked')
+        e=time.perf_counter()
+        print(e-s)
         return func()
-    print('main fun called')
-    return wrapper_fun
+    return wrapper
 
+@main
 def show():
-    print('show fun called')
-decor_show = decor_fun(show)
-decor_show(20, 30)
+    pass
+show(2)
 
-@decor_fun
-def display():
-    print('display fun called')
-display(20, 30)
+@main
+def disp():
+    pass
+disp(3)
