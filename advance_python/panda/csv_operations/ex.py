@@ -57,3 +57,18 @@ print(newdf2.head(2))
 # remove column we use drop() with axis=1
 # newdf2.drop(0,axis=1)
 print(newdf2)
+# to get new 2 rows all columns
+print(newdf2.loc[[1,2],:])
+# to get new 2 rows 2 columns
+print(newdf2.loc[[1,2],['A','B']])
+print()
+print()
+print()
+print()
+print()
+# use condition if in A column value is less than 0.3 then print
+print(newdf2.loc[newdf2['A']<0.3])
+# use condition if in A and C column value is less than 0.3 and  then print
+newdf2.loc[
+    (newdf2['A']<0.3) & 
+    (newdf2['C']>0.1)]
