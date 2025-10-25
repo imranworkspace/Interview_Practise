@@ -42,26 +42,24 @@ def fact_rec(n):
 n=6
 print(f'fact of {n} is {fact_rec(n)}')
 
-# factorial without recursion- DONE
-def myfact(n):
-    my_factorial=1
-    while n>0:
-        my_factorial=my_factorial*n
-        n=n-1
-    return my_factorial
-    
-n=7
-print(f'fact of {n} is {myfact(n)}')
+def fact(n):
+    if n==1:
+        return 1
+    else:
+        return (n*fact(n-1))
 
-# factorial using built in method- DONE
 from math import factorial
-def fact1(n):
-    if n==0:
-        return 0
+def fact2(n):
+    if n==1:
+        return 1
     else:
         return factorial(n)
-n=7
-print(fact1(n))
+        
+n=5
+result = fact(n)
+result2 = fact2(n)
+print(f'fact of {n} is {result}')
+print(f'fact of {n} is {result2}')
 
 # reverse list using inbluilt function - DONE
 def rev(lst):

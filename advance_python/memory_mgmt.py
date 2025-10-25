@@ -1,39 +1,12 @@
-def fun2(p):
-    q=p+10
-    return q
-    
-def fun1(x):
-    z=x+5
-    p=fun2(z)
-    return p
+import sys
 
-x=5
-y=fun1(x)
-print(y)
-
-
-# stack   pri heap
-# x          5
-# y     
-# fun1->
-# z           10
-# p   
-# fun2->
-# q    .      20
-
-# output x=5 and y=20  z p (garbej collector also called dead object)
-
-
-x1=5
-y1=x1
-
-z1=5
-
-print(id(x1))
-print(id(y1))
-print(id(z1))
-# here x1,y1 and z1 point to the same object so in stack all three values ara available and 5 available into private heap 
-# 140714882316856
-# 140714882316856
-# 140714882316856
-
+a=5
+print(f'id a = 1st {id(a)}',sys.getrefcount(a))
+b=a
+print(f'id a = 2st {id(b)}',sys.getrefcount(a))
+c=a
+print(f'id a = 3rd {id(c)}',sys.getrefcount(a))
+del b
+print('after del b ',sys.getrefcount(a))
+del c
+print('after del c ',sys.getrefcount(a))

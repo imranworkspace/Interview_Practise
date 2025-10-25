@@ -1,27 +1,26 @@
 from abc import ABC,abstractmethod
 
 class Car(ABC):
+    @abstractmethod
     def milege(self):
         pass
+    
+    def car_info(self):
+        print('cars have 4 wheels ')
 
 class Tesla(Car):
     def milege(self):
-        print('tesla milege 17 kmpl')
+        print('tesla provide 14 kmpl')
 
 class Tata(Car):
     def milege(self):
-        print('tata milege 14 kmpl')
+        print('tata provide 18 kmpl')
 
-class Hyundai(Car):
-    def milege(self):
-        print('hyundai milege 18 kmpl')
+te = Tesla()
+ta = Tata()
 
-t = Tesla()
-t.milege()
-
-ta=Tata()
+te.milege()
+te.car_info()
+print()
 ta.milege()
-
-h=Hyundai()
-h.milege()
-
+ta.car_info()
