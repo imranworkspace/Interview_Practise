@@ -10,6 +10,6 @@ for index, fruit in enumerate(fruits, start=1):  # Change the starting value as 
 
 
 print('emumerates string')
-name='imran'
+name='imran'    
 for index,val in enumerate(name,start=1):
     print(f'{index*4} of {val}')
