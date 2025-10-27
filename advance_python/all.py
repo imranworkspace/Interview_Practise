@@ -1,3 +1,13 @@
+my_array = [8, 12, 9,7, 2, 4, 11, 7]
+minVal = my_array[0]
+print(minVal)
+for i in my_array:
+  if i < minVal:
+    minVal = i
+
+print('Lowest value:', minVal)
+
+
 # palindrome with slicing  - DONE
 def pali(name):
     return name==name[::-1]
