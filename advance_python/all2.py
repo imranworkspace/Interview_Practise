@@ -7,6 +7,10 @@ for i in my_array:
 
 print('Lowest value:', minVal)
 
+#  expected [1, 3, 5, 7, 9]
+# expected [2,4,6,8]
+lcomp = [i for i in range(1,11) if i & 1 == 0]
+print(lcomp)
 
 # reverse list by recursion
 def r_lst(l):
