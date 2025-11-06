@@ -1,8 +1,10 @@
-def add(x,y):
-    return x+y
+def add(a,b):
+    return a+b
 
 def divide(a,b):
     if b==0:
-        raise ValueError("Zero cannot divided")
-    return a/b
+        raise ValueError("zero cannot divide with any value")
+    return a/b 
 
+def even(n):
+    return n%2==0

@@ -1,20 +1,22 @@
 import unittest
-from calc import add,divide
-
+from calc import add,divide,even
 
 class TestCalc(unittest.TestCase):
     def test_add(self):
-        self.assertEqual(add(2,3),5)
-        self.assertEqual(add(-1,1),0)
-        self.assertNotEqual(add(9,9),0)
+        self.assertEqual(add(2,5),7)
+        self.assertNotEqual(add(5,5),9)
+
     
     def test_divide(self):
         self.assertEqual(divide(10,2),5)
+        
         with self.assertRaises(ValueError):
             divide(10,0)
 
+    def test_even(self):
+        self.assertTrue(even(10))
+        self.assertFalse(even(3))
+        self.assertFalse(even(6))
+
 if __name__=="__main__":
     unittest.main()
-
-
-
