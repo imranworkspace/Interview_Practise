@@ -1,12 +1,16 @@
-my_array = [8, 12, 9,7, 2, 4, 11, 7]
-minVal = my_array[0]
-print(minVal)
+my_array = [8, 12, 9,7, 2, 4, 0,11, 70]
+minVal=my_array[0]
+maxVal=my_array[0]
+
 for i in my_array:
-  if i < minVal:
-    minVal = i
+    if i>maxVal:
+        maxVal=i
+    elif i<minVal:
+        minVal=i
+    
 
-print('Lowest value:', minVal)
-
+print("Lowest value :",minVal)
+print("Max value :", maxVal)
 
 # palindrome with slicing  - DONE
 def pali(name):
@@ -56,7 +60,8 @@ def fact(n):
     if n==1:
         return 1
     else:
-        return (n*fact(n-1))
+        return (n*fact(n-1)) # 5*4*3*2*1 = 120
+
 
 from math import factorial
 def fact2(n):

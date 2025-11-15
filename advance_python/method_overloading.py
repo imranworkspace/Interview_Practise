@@ -1,19 +1,48 @@
 from multipledispatch import dispatch
 
 @dispatch(int,int)
-def myfun(a,b):
-    print(a*b)
+def add(a,b):
+    return a+b
+
+@dispatch(int,float)
+def add(a,b):
+    print('int,float')
+    return a+b
+
+
+@dispatch(float,float)
+def add(a,b):
+    return a+b
 
 @dispatch(int,int,int)
-def myfun(a,b,c):
-    print(a*b*c)
+def add(a,b,c):
+    return a+b+c
 
-@dispatch(float,float,float)
-def myfun(a,b,c):
-    print(a*b*c)
-myfun(1,2)
-myfun(1.0,2.0,3.0)
-myfun(1,2,3)
+@dispatch(float,float,float,float)
+def add(a,b,c,d):
+    return a+b+c+d
+
+print(add(10,10.0))
+
+
+
+
+# from multipledispatch import dispatch
+
+# @dispatch(int,int)
+# def myfun(a,b):
+#     print(a*b)
+
+# @dispatch(int,int,int)
+# def myfun(a,b,c):
+#     print(a*b*c)
+
+# @dispatch(float,float,float)
+# def myfun(a,b,c):
+#     print(a*b*c)
+# myfun(1,2)
+# myfun(1.0,2.0,3.0)
+# myfun(1,2,3)
 
 # import multiprocessing
 

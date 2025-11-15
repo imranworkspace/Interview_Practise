@@ -246,3 +246,41 @@ print(d3)
 
 d3.popitem()
 print(d3)
+
+------------------------------------
+s='hello world'
+print(s[::-1])
+print(s[0:2])
+
+print(s[6:])
+
+print(s[2:5])
+
+print(s[-1])
+print(s[:-1])
+print(s[:1])
+print('----------------------------------------------------------')
+fruits = ["apple", "banana", "grape"]
+
+print(','.join(fruits))
+str1 = "apple, banana, grape"
+print('split() ',str1.split(","))
+
+
+s = "   hello   "
+print(s.lstrip())
+print(s.rstrip())
+print(s.strip())
+
+print(s.replace("hello","bello"))
+
+s2='imran@dell@786'
+print(s2.isalpha())
+print(s2.isdigit())
+print(s2.isalnum())
+
+
+s3='hello world'
+print(s3.find("world"))
+
+print('world' in s3)

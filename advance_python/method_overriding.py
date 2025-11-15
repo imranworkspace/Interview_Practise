@@ -1,10 +1,9 @@
-
-class Animal:
+class Dog:
     def speak(self):
-        print('animcal can speak')
-
-class Dog(Animal):
+        print('dog say bhaww')
+class Cat(Dog):
     def speak(self):
-        print('dog can speak')
-a=Dog()
-a.speak()
+        super().speak()
+        print('cat say meawwwwwww')
+c=Cat()
+c.speak()
