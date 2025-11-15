@@ -5,7 +5,9 @@ def func(n):
     print('func is calling waiting for {} seconds'.format(n))
     time.sleep(n) # releasing thread
     return n 
-# normal function
+# -------------------
+# Sequential version
+# -------------------
 time1=time.perf_counter()
 func(10)
 func(4)
@@ -14,7 +16,9 @@ func(1)
 time2=time.perf_counter()
 print(time2-time1)
 #--------------------------------------------------------
-# not good practise for huge data
+# -------------------
+# Threading version
+# -------------------
 time1=time.perf_counter()
 t1=threading.Thread(target=func,args=[10])
 t2=threading.Thread(target=func,args=[4])
@@ -34,12 +38,15 @@ time2=time.perf_counter()
 print(time2-time1)
 #--------------------------------------------------------
 if __name__=="__main__":
+    # -------------------
+    # ThreadPoolExecutor version
+    # -------------------
     time1=time.perf_counter()
     with ThreadPoolExecutor() as executor:
         # multiple files or urls download from internet or application I can do it using below with with ThreadPoolExecutor
         timer_lst =(10,4,2,1)
-        results = executor.map(func,timer_lst)
-        for result in results:
-            print(result)
+        for results in executor.map(func,timer_lst):
+        # for result in results:
+            print(results)
     time2=time.perf_counter()
     print(time2-time1)
