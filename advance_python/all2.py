@@ -210,13 +210,20 @@ print()
 # Get Only unique items from two sets
 set1 = {10, 20, 30, 40, 50}
 set2 = {30, 40, 50, 60, 70}
+
+set2.add(100)
+
 print(set1.union(set2))
 print(set1.intersection(set2))
 print(set1.difference(set2))
 print(set1.difference_update(set2))
-print()
-print()
 
+print(100 in set1)
+print(100 in set2)
+
+set1.add(4)         # add element
+set1.remove(2)      # remove element (error if missing)
+set1.discard(10)    # no error if element missing
 d = {1:'imran',2:'irfan'}
 print(d.keys())
 print(d.values())
