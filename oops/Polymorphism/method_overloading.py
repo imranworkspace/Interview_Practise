@@ -1,18 +1,4 @@
 from multipledispatch import dispatch
-@dispatch(int,int)
-def add(a,b):
-    return a+b
-
-@dispatch(int,int,int)
-def add(a,b,c):
-    return a+b+c
-
-print(add(1,2))
-print(add(1,2,3))
-
-
-
-'''from multipledispatch import dispatch
 
 @dispatch(int,int)
 def add(a,b):
@@ -36,7 +22,7 @@ def add(a,b,c):
 def add(a,b,c,d):
     return a+b+c+d
 
-print(add(10,10.0))'''
+print(add(10,10.0))
 
 
 

@@ -3,7 +3,7 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 def func(n):
     print('func is calling waiting for {} seconds'.format(n))
-    time.sleep(n) # releasing thread
+    time.sleep(n) # releasing GIL
     return n 
 # -------------------
 # Sequential version
