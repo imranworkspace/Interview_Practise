@@ -20,7 +20,7 @@ def r_lst(l):
     
 l=[7,8,9]
 print(r_lst(l))
-# reverse list by recursion without re
+# reverse list by recursion without recursion
 def rev_2(l2):
     rev_lst_ex=[]
     if len(l2)==0:
@@ -291,3 +291,12 @@ s3='hello world'
 print(s3.find("world"))
 
 print('world' in s3)
+
+
+lst=['heart','earth', 'act','tac','cat','rahul','imran','stones','tones','god','dog']
+n=len(lst)
+nlst=[]
+for i in range(n):
+    print(lst[i],lst[i+1])
+    print(sorted(lst[i]) == sorted(lst[i+1]))
+    print()
