@@ -222,7 +222,7 @@ print(100 in set1)
 print(100 in set2)
 
 set1.add(4)         # add element
-set1.remove(2)      # remove element (error if missing)
+# set1.remove(2)      # remove element (error if missing)
 set1.discard(10)    # no error if element missing
 d = {1:'imran',2:'irfan'}
 print(d.keys())
@@ -254,7 +254,7 @@ print(d3)
 d3.popitem()
 print(d3)
 
-------------------------------------
+print('------------------------------------')
 s='hello world'
 print(s[::-1])
 print(s[0:2])
@@ -293,10 +293,24 @@ print(s3.find("world"))
 print('world' in s3)
 
 
-lst=['heart','earth', 'act','tac','cat','rahul','imran','stones','tones','god','dog']
-n=len(lst)
-nlst=[]
-for i in range(n):
-    print(lst[i],lst[i+1])
-    print(sorted(lst[i]) == sorted(lst[i+1]))
-    print()
+# lst=['heart','earth', 'act','tac','cat','rahul','imran','stones','tones','god','dog']
+# n=len(lst)
+# nlst=[]
+# for i in range(n):
+#     print(lst[i],lst[i+1])
+#     print(sorted(lst[i]) == sorted(lst[i+1]))
+#     print()
+
+''' Find duplicates in a list '''
+lst2 = [1,2,3,1,2,4]
+lst3 =[]
+for i in lst2:
+    if i not in lst3:
+        lst3.append(i)
+
+
+print(lst3)
+print(lcomp)
+# dup = [x for x in set(lst2) if lst2.count(x) > 1]
+# print(dup)
+
