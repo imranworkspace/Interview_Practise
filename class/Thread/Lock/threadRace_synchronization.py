@@ -1,14 +1,12 @@
-from threading import Thread,current_thread,Semaphore,BoundedSemaphore
+from threading import Thread,current_thread,Lock
 
 class Flight:
     def __init__(self,available_seat):
         self.available_seat = available_seat
-        # self.l = Semaphore(2) # semaphore - synchronize lock allow 2 threads lock at the same time  
-        self.l = BoundedSemaphore(2) # Bounded semaphore - synchronize lock allow 2 threads lock at the same time  
+        self.l = Lock() # add lock 
     
     def reserve(self,need_seat):
         self.l.acquire() # locking from here 
-        # self.l._value() # show semaphore value 
         print(f'available seat is {self.available_seat}')        
         if self.available_seat >= need_seat:
             name = current_thread().name 
@@ -20,12 +18,15 @@ class Flight:
             print('sorry seats full..')
         self.l.release() # realising lock from here 
 
-myt = Flight(2)
+myt = Flight(4)
 t1 = Thread(target=myt.reserve,args=(1,),name="Irfan")
 t2 = Thread(target=myt.reserve,args=(1,),name="guddu")
 t3 = Thread(target=myt.reserve,args=(1,),name="shakil")
-
+t4 = Thread(target=myt.reserve,args=(1,),name="zunaisha")
+t5 = Thread(target=myt.reserve,args=(1,),name="vicky")
 
 t1.start()
 t2.start()
 t3.start()
+t4.start()
+t5.start()
