@@ -15,10 +15,12 @@ class Flight:
                 print(f"Reservation confirmed for {name}")
                 self.available_seats -= need_seat
                 sleep(3)
+                
             else:
                 print(f"NOT enough seats for {name.upper()}")
             
             print(f"{name} leaving...")
+            print()
 
 f = Flight(3)
 t1 = Thread(target=f.reserve, args=(1,), name="Martodkar")
