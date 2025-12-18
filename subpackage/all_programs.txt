@@ -1,0 +1,29 @@
+# prime number 
+# fibonacci series with for and while loop
+# factorial with and without inbuilld function
+# reverse string 
+# reverse number
+# armstrong number
+# find missing values
+# remove list with recursion, without recursion
+# revse string 
+# call by reference
+# call by value
+# enagram 
+# min, max value from list
+# multithreading with Lock,RLock,Semaphore
+# dunter method 
+# leap year 
+# positive/negative number 
+# remove duplicates from list
+# stateless,statefull 
+# syncrhonous,asynchronous ex
+# numpy example 1d,2d,3d with attributes,methods 
+# abstraction,interface
+# polymorphism - m. overloading,m.overriding
+# higher order function - filter,reduce and map
+# shallow and deep copy
+# pickle,unpickle
+# ternory operator
+# with , open file operations with methods
+# string function,list function,set function,dictionary function

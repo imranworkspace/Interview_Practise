@@ -43,15 +43,13 @@ def rev_str2(name2):
 name2="imran"
 print(rev_str2(name2))
 # reverse number 
-def rev_num(n):
-    rev_n=0
-    while n>0:
-        remainder = n%10
-        rev_n=(rev_n*10)+remainder
-        n=n//10
-    return rev_n
+def rev_num(num):
+    rev=0
+    while num > 0:
+        rev=rev*10+num%10
+        num//=10
+    print(rev)
 n=321
-print(rev_num(n))
 # palindrom string,name
 def pali(name3):
     if len(name3):

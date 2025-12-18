@@ -26,3 +26,16 @@ if n==res:
     print(f'{n} is palindrome')
 else:
     print('not palindrome')
+
+
+# reverse list
+def rev_lst(lst):
+    if len(lst)==0:
+        return []
+    return [lst[-1]] + rev_lst(lst[:-1])
+lst=[1,2,3,2,1]
+result = rev_lst(lst)
+if lst==result:
+    print('Yes given list is palindrome ',lst)
+else:
+    print('No given list is palindrome ',lst)

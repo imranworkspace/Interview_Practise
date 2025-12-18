@@ -63,3 +63,5 @@ for row in range(n):# n=5,row=0
     for col in range(len(mob_age[row])): # mob_age(0)
         print(mob_age[row][col])
     print()
+
+
