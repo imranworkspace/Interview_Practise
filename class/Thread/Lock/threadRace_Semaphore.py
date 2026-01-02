@@ -1,34 +1,36 @@
-from threading import Thread, current_thread, Semaphore
-from time import sleep
-
+from threading import Thread, current_thread, Semaphore,Lock
+from datetime import time
 class Flight:
-    def __init__(self, available_seats):
-        self.available_seats = available_seats
-        self.l = Semaphore(2)   # allow 2 threads at once
-        
-    def reserve(self, need_seat):
-        with self.l:   # safer than acquire/release
-            name = current_thread().name
-            print(f"{name} entered → available seats: {self.available_seats}")
-            
-            if self.available_seats >= need_seat:
-                print(f"Reservation confirmed for {name}")
-                self.available_seats -= need_seat
-                sleep(3)
-                
-            else:
-                print(f"NOT enough seats for {name.upper()}")
-            
-            print(f"{name} leaving...")
-            print()
+    def __init__(self,available_seats):
+        self.available_seats=available_seats
+        # self.lock = Lock()
+        self.lock = Semaphore(2)
+    
+    def reservation(self,need_seats):
+        self.lock.acquire()
+        # with self.lock:
+        print(f'available seats  are {self.available_seats}')
+        name = current_thread().name 
+        if self.available_seats >= need_seats:
+            print(f'seats available to {name} - {need_seats}')
+            self.available_seats -= need_seats
+        else:
+            print(f'no seats available {name} for you can book another flight')
+        print()
+        time(10)
+        self.lock.release()
 
-f = Flight(3)
-t1 = Thread(target=f.reserve, args=(1,), name="Martodkar")
-t2 = Thread(target=f.reserve, args=(1,), name="Zunaisha")
-t3 = Thread(target=f.reserve, args=(1,), name="Afreen")
-t4 = Thread(target=f.reserve, args=(1,), name="Dilnaz")
+f = Flight(10)
+t1 = Thread(target=f.reservation,args=(1,),name="imran")
+t2 = Thread(target=f.reservation,args=(2,),name="vicky")
+t3 = Thread(target=f.reservation,args=(3,),name="sonu")
+t4 = Thread(target=f.reservation,args=(2,),name="immi")
+t5 = Thread(target=f.reservation,args=(2,),name="raj")
+t6 = Thread(target=f.reservation,args=(1,),name="ravi")
 
 t1.start()
 t2.start()
 t3.start()
 t4.start()
+t5.start()
+t6.start()
