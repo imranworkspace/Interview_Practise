@@ -1,4 +1,4 @@
-from threading import Thread,current_thread,Lock
+from threading import Thread,current_thread,Lock,Semaphore
 
 class Flight:
     def __init__(self,available_seat):
