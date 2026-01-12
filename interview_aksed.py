@@ -11,3 +11,11 @@ for i in range(len(nums)):
         seen[nums[j]] = j
 
 print(res)
+
+
+s = "a,bc$d"
+
+s = s[::-1]
+s = s.replace(",", "#").replace("$", ",").replace("#", "$")
+
+print(s)
