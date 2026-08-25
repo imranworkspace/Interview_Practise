@@ -18,7 +18,7 @@ print(dummy[2])
 
 
 # Accessing the dictionary values
-Employee = {"Name": "Dev", "Age": 20, "salary":45000.0,"Company":"WIPRO"}      
+Employee = {"Name": "Dev", " Age": 20, "salary":45000.0,"Company":"WIPRO"}      
 print('Name %s '%Employee['Name'])
 print('Age %d '%Employee['Age'])
 print('Age %d '%Employee['salary'])

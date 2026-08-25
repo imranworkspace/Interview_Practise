@@ -1,39 +1,31 @@
-lst=[1,2,3]
-print(len(lst))
-print(type(lst))
-print(tuple(lst))
+lst=[3,2,1]
 lst.append(4)
+lst.extend((10,20,4))
+lst.extend([30,40])
+lst.extend({6,7}) # 3,2,1,4,10,20,4,30,40,6,7
 print(lst)
+lst.remove(4)# 4 will remove from first occurance and # 3,2,1,10,20,4,30,40,6,7
+lst.insert(4,1000)# 3,2,1,10,1000,20,4,30,40,6,7
+lst.pop()## 3,2,1,10,1000,20,4,30,40,6
+print('pop',lst)
+print(lst)
+print('----')
+lst.pop(2)## 3,2,1,10,1000,20,4,30,40,6
+print('pop',lst)
+input()
+lst.sort()#
+print(lst)
+lst.sort(reverse=True)#
+print(lst)
+print(lst.index(1000))
 
-mytup = (4,5,6,7,8)
-print(type(mytup))
-lst2=[9,8,7]
-lst.extend(mytup)
-lst.extend(lst2)
-print(set(lst))
-
-print('copy lst')
-lst3=[0,0,0,0]
-lst3.extend(lst)
-print(lst3)
-
-
-print('remove item ')
-lst3.pop()
-print(lst3)
-
-lst3.remove(4)
-print(lst3)
-
-lst3.clear()
-print(lst3)
-
-mytup2 = tuple(lst)
-print(type(mytup2))
-print(len(mytup2))
+#copy lst 
+lst2,lst3=[],[]
+lst2.extend(lst)
+lst3=lst2
+print('lst2',lst2)
+print('lst3',lst3)
 
 
-
-
-
-
+lst.clear()
+print(lst)
