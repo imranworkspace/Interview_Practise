@@ -1,0 +1,5 @@
+f=open('C:/Users/imran/INTERVIEW_PRACTICE/Interview_Practise/Python_Practise_Example/file_operations/imran2.txt',"x")
+# c=f.read()
+c=f.write(" and zunaisha..")
+print(c)
+f.close()
