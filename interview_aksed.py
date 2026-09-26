@@ -1,3 +1,26 @@
+# Company ASked
+'''
+
+1. 4 golder achievments 
+	My 4 key achievements are:
+
+	1. Developed scalable backend APIs using Python, Flask, Django, and FastAPI.
+	2. Improved application performance and reliability through optimization and monitoring.
+	3. Implemented CI/CD and deployment using Docker, AWS, and Jenkins.
+	4. Successfully delivered projects while meeting business and technical requirements.
+
+2. my kubernetes cluster goes 95% up then how can I deal with it 
+3. some power outages happnes during production as a backend developer or infrastructure developer what steps we gonna do instead of ALB 
+4. which aws services for maintaining environment variables 
+5. jenkins structure 
+6. kubernetes structure
+7. learn more detailed in prometheous and graphana
+8. file system handling it goes incresed day by day then how can I deal with it 
+9. in jenkins 404 happnes we got from end users/client on production then what steps we gonna do 
+10. instead of JWT which authentication and authorization services you used?
+
+'''
+
 # INFOSYS ASKED
 # typhinting
     # Type hinting means specifying the expected data type of variables, function parameters, and return values. It helps with readability, IDE autocomplete, static checking, and maintaining large projects.
@@ -41,6 +64,15 @@ def get_employee(employee_id: int) -> dict:
         "id": employee_id,
         "name": "Imran"
     }
+
+
+# typehinting sqlalchemy
+from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import String, Integer
+
+class Employee:
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    name: Mapped[str] = mapped_column(String(50))
 ---------------------------
 l=[1,2,3,5,4,5,2,3,1,3,5]
 
