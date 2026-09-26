@@ -29,6 +29,18 @@ def getEmpl(name:str,age:int)->dict[str,int|str]:
 name=input('enter your good name : ')
 age=int(input(f'enter your age {name} : '))
 print(getEmpl(name,age))
+
+# typehinting fastapi 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/employee/{employee_id}")
+def get_employee(employee_id: int) -> dict:
+    return {
+        "id": employee_id,
+        "name": "Imran"
+    }
 ---------------------------
 l=[1,2,3,5,4,5,2,3,1,3,5]
 
