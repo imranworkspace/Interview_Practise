@@ -4,5 +4,5 @@ exp_=n*(n+1)//2
 print(exp_)
 act_sum=sum(lst)
 print(act_sum)
-result=exp_-act_sum
+result=exp_ - act_sum
 print(result)

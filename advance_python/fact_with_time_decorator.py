@@ -4,6 +4,13 @@ import time
 def time_decor(func):
     def wrapper(*args,**kwargs):
         start=time.time()
+        
+        try:
+            tot = args[0]+args[1]
+            print(tot)
+        except (IndexError,TypeError) as e:
+            pass 
+
         end=time.time()
         es=end-start
         print(f'estimate time for {func.__name__}',es)
@@ -11,14 +18,10 @@ def time_decor(func):
     return wrapper()
 
 @time_decor
-def fibo(n):
-    count,n1,n2=0,0,1
-    while count<n:
-        print(n1)
-        n1,n2=n1+n2,n1
-        count+=1
-n=5
-fibo(n)
+def add():
+    print('add called')
+
+add(3,4)
 
 @time_decor
 def fprime():

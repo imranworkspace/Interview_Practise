@@ -6,10 +6,8 @@ def prime(a,b):
         if n>1:
             for i in range(2,n//2+1): # range(2,7)    # 2,3,4,5,6
                 if n%i==0:
-                    # print('not prime ')
                     break
             else:
-                
                 print(f'no is prime {n}')
 
 prime(1,100)

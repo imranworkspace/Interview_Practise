@@ -6,7 +6,7 @@ def pali(name):
     else:
         return False
 
-name='madam'
+name='madam' 
 res=pali(name)
 if res:
     print('palindrome')

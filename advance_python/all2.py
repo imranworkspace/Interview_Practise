@@ -146,8 +146,10 @@ print(f'fact of {n} is {fact3(n)}')
 def list_to_dict(new_list):
     d={}
     for key,value in new_list:
+        temp=0
         if key not in new_list:
-            d[key]=value
+            temp+=key
+            d[temp]=value
         else:
             d[key]=value
     return d
@@ -156,7 +158,22 @@ new_list = [(5, 'a'), (2, 'b'), (3, 'c'), (5, 'ab')]
 # expected {5: 'ab', 2: 'b', 3: 'c'}
 print(list_to_dict(new_list))
 
+def list_to_dict2(new_list):
+    d={}
+    for k,v in new_list:
+        temp=0
+        if k in d:
+            d.pop(k)
+            d[k+k]=v 
+        else:
+            d[k]=v 
+    return d 
 
+new_list = [(5, 'a'), (2, 'b'), (3, 'c'), (5, 'ab'),(3,'imran')]
+
+# # expected {5: 'ab', 2: 'b', 3: 'c'}
+
+print(list_to_dict2(new_list))
 
 # find second largest number from given list 
 lst=[1,2,3,5,6,7,8,9,0,12,34,56,78]

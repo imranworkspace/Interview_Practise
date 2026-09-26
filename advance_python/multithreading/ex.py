@@ -1,29 +1,39 @@
 import time
 import threading
 from concurrent.futures import ThreadPoolExecutor
-def func(n):
-    print('func is calling waiting for {} seconds'.format(n))
-    time.sleep(n) # releasing GIL
-    return n 
-# -------------------
-# Sequential version
-# -------------------
-time1=time.perf_counter()
-func(10)
-func(4)
-func(2)
-func(1)
-time2=time.perf_counter()
-print(time2-time1)
-#--------------------------------------------------------
-# -------------------
+
+
+def fun(n):
+    print(f"Wait for {n} seconds")
+    time.sleep(n)
+    return n
+
+
+# # -------------------------
+# # Sequential version
+# # -------------------------
+s1 = time.perf_counter()
+
+fun(10)
+fun(4)
+fun(2)
+fun(1)
+
+e1 = time.perf_counter()
+
+print(f"Time taken for sequential process: {e1 - s1:.2f} seconds")
+print()
+
+
+# -------------------------
 # Threading version
-# -------------------
-time1=time.perf_counter()
-t1=threading.Thread(target=func,args=[10])
-t2=threading.Thread(target=func,args=[4])
-t3=threading.Thread(target=func,args=[2])
-t4=threading.Thread(target=func,args=[1])
+# -------------------------
+s2 = time.perf_counter()
+
+t1 = threading.Thread(target=fun, args=(10,))
+t2 = threading.Thread(target=fun, args=(4,))
+t3 = threading.Thread(target=fun, args=(2,))
+t4 = threading.Thread(target=fun, args=(1,))
 
 t1.start()
 t2.start()
@@ -34,19 +44,36 @@ t1.join()
 t2.join()
 t3.join()
 t4.join()
-time2=time.perf_counter()
-print(time2-time1)
-#--------------------------------------------------------
-if __name__=="__main__":
-    # -------------------
-    # ThreadPoolExecutor version
-    # -------------------
-    time1=time.perf_counter()
-    with ThreadPoolExecutor() as executor:
-        # multiple files or urls download from internet or application I can do it using below with with ThreadPoolExecutor
-        timer_lst =(10,4,2,1)
-        for results in executor.map(func,timer_lst):
-        # for result in results:
-            print(results)
-    time2=time.perf_counter()
-    print(time2-time1)
+
+e2 = time.perf_counter()
+
+print(f"Time taken for threading process: {e2 - s2:.2f} seconds")
+print()
+
+
+# -------------------------
+# ThreadPoolExecutor version
+# -------------------------
+if __name__ == "__main__":
+
+    s3 = time.perf_counter()
+
+    timer_lst = (10, 4, 2, 1)
+
+    with ThreadPoolExecutor(max_workers=4) as executor:
+
+        futures = [
+            executor.submit(fun, i)
+            for i in timer_lst
+        ]
+
+        for future in futures:
+            try:
+                result = future.result()
+                print(f"Result: {result}")
+            except Exception as e:
+                print(f"Error: {e}")
+
+    e3 = time.perf_counter()
+
+    print(f"Time taken for ThreadPoolExecutor process: {e3 - s3:.2f} seconds")
