@@ -21,6 +21,15 @@ def getAdd(a:int,b:int)->int:
     print(a+b)
 getAdd(1,2)
 
+def getEmpl(name:str,age:int)->dict[str,int|str]:
+    return {
+        "name":name,
+        "age":age
+    }
+name=input('enter your good name : ')
+age=int(input(f'enter your age {name} : '))
+print(getEmpl(name,age))
+---------------------------
 l=[1,2,3,5,4,5,2,3,1,3,5]
 
 # using lambda function use reduce to find the sum 
