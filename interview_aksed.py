@@ -19,7 +19,47 @@
 9. in jenkins 404 happnes we got from end users/client on production then what steps we gonna do 
 10. instead of JWT which authentication and authorization services you used?
 
+extra:
+* self join
+* findout 2nd highest salary from emp where 2nd highest salary for users are same now using dense_rank()
+
 '''
+
+from passlib.context import CryptContext
+
+pwd_context = CryptContext(
+    schemes=["bcrypt"],
+    deprecated="auto"
+)
+
+
+def hash_password(password: str) -> str:
+    return pwd_context.hash(password)
+
+
+def verify_password(plain_password: str, hashed_password: str) -> bool:
+    return pwd_context.verify(plain_password, hashed_password)
+
+
+# Registration
+password = "MySecret@123"
+print('your password ',password)
+
+hashed_password = hash_password(password)
+
+print("Store this in hashed DB:",hash_password)
+
+
+# Login
+login_password = "MySecret@123"
+
+if verify_password(login_password, hashed_password):
+    print(login_password,' - ',hash_password)
+    print("Login successful")
+else:
+    print("Invalid username or password")
+
+print('---------------------------------------')
 
 # INFOSYS ASKED
 # typhinting
@@ -30,7 +70,7 @@ def getEmployees()->list[str]:
 print(getEmployees())
 
 def getEmployee(name:str)->str:
-    return f'Hello {name)}!'
+    return f'Hello {name}!'
 print(getEmployee("imran"))
 
 
@@ -49,9 +89,9 @@ def getEmpl(name:str,age:int)->dict[str,int|str]:
         "name":name,
         "age":age
     }
-name=input('enter your good name : ')
-age=int(input(f'enter your age {name} : '))
-print(getEmpl(name,age))
+# name=input('enter your good name : ')
+# age=int(input(f'enter your age {name} : '))
+# print(getEmpl(name,age))
 
 # typehinting fastapi 
 from fastapi import FastAPI
@@ -73,7 +113,7 @@ from sqlalchemy import String, Integer
 class Employee:
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(50))
----------------------------
+#---------------------------
 l=[1,2,3,5,4,5,2,3,1,3,5]
 
 # using lambda function use reduce to find the sum 
