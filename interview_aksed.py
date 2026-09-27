@@ -22,6 +22,7 @@
 extra:
 * self join
 * findout 2nd highest salary from emp where 2nd highest salary for users are same now using dense_rank()
+* mixin, throttle,jwt
 
 '''
 
@@ -141,7 +142,7 @@ def decor_main(func):
         s=time.perf_counter()
         r = func()
         e=time.perf_counter()
-        print(e-s)
+        print(f'{func.__name__} \t{e-s:.2f}')
         return r 
     return wrapper
     
@@ -150,7 +151,7 @@ def sample():
     time.sleep(3)
     print('sample fun called')
 
-# sample()
+sample()
 
 
 nums = [2,7,11,15,3,6]
