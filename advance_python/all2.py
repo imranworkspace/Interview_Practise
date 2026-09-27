@@ -1,3 +1,4 @@
+
 my_array = [8, 12, 9,7, 2, 4, 11, 7]
 minVal = my_array[0]
 print(minVal)
@@ -329,3 +330,61 @@ print(lcomp)
 # dup = [x for x in set(lst2) if lst2.count(x) > 1]
 # print(dup)
 
+
+a={1,2,3,4}
+b={3,4,5,6}
+print(a|b)
+print(a.intersection(b))
+print(a.difference(b))
+print(a-b)
+print(b-a)
+print(a^b)
+a={1,2}
+b={1,2,3,4}
+print(a.issubset(b))
+print(b.issuperset(a))
+print()
+a={1,2}
+b={3,4}
+print(a.isdisjoint(b))
+print()
+print()
+
+print()
+print()
+print()
+print()
+d={
+    'name':'imran',
+    'age':30
+}
+d['city']='latur'
+print(d)
+print(type(d))
+import json 
+dr=json.dumps(d)
+print(dr)
+print(type(dr))
+loa = json.loads(dr)
+print(loa)
+print(type(loa))
+print(loa.keys())
+print(loa.values())
+for k,v in loa.items():
+    print(k,v)
+print()
+lst=[1,2]
+lst.append([3,4,5,2])
+lst.append(6)
+lst.append(2)
+lst.append(3)
+print(lst)
+print(lst.index(3))
+lst.remove(2)
+print('remove from first occurance',lst)
+lst.pop()
+print(lst)
+print()
+lst.extend([9,8,7])
+lst.extend((45,65,43))
+print('extend',lst)
