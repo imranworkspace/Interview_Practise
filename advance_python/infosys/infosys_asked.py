@@ -9,6 +9,15 @@
     # depends on paymentgateway not directly any specific gateway ex. paypal
 # what is decent patterns
 # interview asked have you implemented algorithm in your project? ex.searching sorting algorithm
+    # हाँ, मैंने अपने project में algorithmic logic implement किया है।
+
+    # उदाहरण के लिए, मेरे project में एक Product Search API थी, जहाँ user products को name और category के आधार पर search कर सकता था और price के आधार पर sort कर सकता था।
+
+    # मैंने filtering के लिए list traversal का उपयोग किया और sorting के लिए Python का sorting algorithm use किया। Filtering की time complexity O(n) थी और sorting की complexity सामान्यतः O(n log n) होती है।
+
+    # FastAPI में मैंने इन operations को एक GET API के through expose किया था। इसलिए frontend/API client query parameters जैसे category, keyword और sort_by_price भेज सकता था और backend processed result return करता था।
+
+    # इससे मुझे algorithm को सिर्फ coding problem के रूप में नहीं, बल्कि real-world application में implement करने का experience मिला।
 ---------------------------------------------------------------------------------
 # 1.project structure
 
