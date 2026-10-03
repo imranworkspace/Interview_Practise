@@ -175,3 +175,6 @@ s = s[::-1]
 s = s.replace(",", "#").replace("$", ",").replace("#", "$")
 
 print(s)
+
+
+#pytest

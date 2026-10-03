@@ -8,4 +8,4 @@ list1 = [1,2,3]
 list2 = [4,5,6,1,2,3]
 print(set(list1) ^ set(list2)) # {4,5,6}
 print(set(list1) | set(list2)) # {1,2,3,4,5,6}
-print(set(list1) & set(list2)) # {1,2,3}
+print(set(list1) & set(list2)) # {1,2,3} 

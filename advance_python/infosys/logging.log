@@ -1,0 +1,14 @@
+2026-10-02 17:00:41,947 - INFO - started add
+2026-10-02 17:00:41,948 - INFO - finished add (1, 2)
+2026-10-02 17:00:41,948 - INFO - started mul
+2026-10-02 17:00:41,949 - INFO - finished mul (1, 2)
+2026-10-02 17:00:41,949 - INFO - started div
+2026-10-02 17:00:41,949 - ERROR - cannot divided by zero
+Traceback (most recent call last):
+  File "C:\Users\imran\INTERVIEW_PRACTICE\Interview_Practise\advance_python\infosys\infosys_asked.py", line 20, in wrapper
+    r = func(*args,**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\imran\INTERVIEW_PRACTICE\Interview_Practise\advance_python\infosys\infosys_asked.py", line 45, in div
+    return (a/b)
+            ~^~
+ZeroDivisionError: division by zero
