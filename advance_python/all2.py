@@ -45,7 +45,7 @@ name2="imran"
 print(rev_str2(name2))
 # reverse number 
 def rev_num(num):
-    rev=0
+    rev=0   
     while num > 0:
         rev=rev*10+num%10
         num//=10

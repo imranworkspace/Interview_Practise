@@ -151,3 +151,20 @@ def div(a,b):
 add(1,2)
 mul(1,2) 
 div(10,0) 
+
+
+# find second highest salary 
+lst=[
+    {'name':'imran','salary':30000},
+    {'name':'sohel','salary':45000},
+    {'name':'kiran','salary':55000}
+]
+highest=second_higest=float('-inf')
+for emp in lst:
+    salary=emp['salary']
+    if salary>highest:
+        second_higest=highest
+        highest=salary
+    elif salary>second_higest:
+        second_higest=salary
+print(second_higest)
