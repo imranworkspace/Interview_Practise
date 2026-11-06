@@ -77,6 +77,17 @@ def enagram(lst):
             nlst.append((lst[i],lst[i+1]))
     print(nlst)
     
+lst = ['heart', 'earth', 'cat', 'mat', 'tac']
+
+groups = {}
+
+for word in lst:
+    key = ''.join(sorted(word))
+    groups.setdefault(key, []).append(word)
+print(list(groups.values()))
+
+print(list(groups.values()))
+
 def call_by_ref(lst):
     time.sleep(1)
     lst.append(10)
@@ -89,6 +100,8 @@ def call_by_val(a):
     
 lst=["heart","earth", "act","tac","cat","rahul","imran",
 "stones","tones","god","dog"]
+
+
 lst3=[2,3]
 print('before call by ref',lst3)
 call_by_ref(lst3)

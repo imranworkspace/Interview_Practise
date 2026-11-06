@@ -168,3 +168,73 @@ for emp in lst:
     elif salary>second_higest:
         second_higest=salary
 print(second_higest)
+
+# Sort dictionary by value
+salary_dict=[55000,5000,1000]
+d2 = {num:i for i,num in enumerate(salary_dict)}
+r = dict(sorted(d2.items(),key=lambda x: x[1],reverse=True))
+print(r)
+
+
+
+my_dict = {
+    "apple": 50,
+    "banana": 20,
+    "mango": 40,
+    "orange": 10
+}
+
+r = dict(sorted(my_dict.items(),key=lambda item:item[1],reverse=True))
+print(r)
+
+# # solid principle
+# # 1. single responsibility principle
+# # one class should take care only one responsibility
+
+# class Employee:
+#     return only Employee details 
+
+# class EmployeeReport
+#     return only employee report basis on employee
+#     details like empid,name,salary,age,desig 
+
+# # 2. open/close principle
+# we can add add more code without affecting
+# existing code 
+
+# class CreateUPIPayment:
+#     pass 
+
+# class PhonePayUpiPayment: # newly added no affect 
+# # on existing code 
+#     pass 
+
+# # 3.Liskov Substituion principle
+# we can create new code basis on existing code
+# ex. duck typing - pengiun cannot fly -Throw and exception
+
+# #4. Interface S.principle
+# in other class it should not force to insert 
+# existing method as per their need it should work
+
+# from typing import Protocol
+# class Printer(Protoco):
+#     print('printer works')
+
+# class Scanner(Protoco):
+#     printer('scanner works')
+
+# class Multi(Protoco)
+#     def printer_fun():
+#         print('printer works')
+#     def scanner_fun():
+#         print('scanner works')
+# # 5. Dependency I principle
+# high level business logic 
+# it should be abstract no need to depends on each other
+
+# class Order:
+#     print('send order')
+
+# class Notification:
+#     print('send notification')

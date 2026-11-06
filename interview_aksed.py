@@ -1,3 +1,75 @@
+
+
+
+''''mostly asked 
+introduction yourself 
+VIMP -> why migration required only in python,when you done migration from .net project or C# project into fastapi which challeges you faced.
+1.generator and iterator - more explain in details
+2.decorator with example  - 
+3.shallow and deep copy - explain it properly 
+4.oops 4 pillars - defination and example
+5.methods example - instance method,class method,static method 
+6.type hinting
+7.why async 
+8.diff multithreading and multiprocessing and GIL 
+9.diff between list and tuple 
+10.context manager with and example - custom contextmanager 
+11.what is pickle and its types
+12.how memory managed in python 
+13.coding - reverse string,reverse list,get common records from two list without for loop,
+anagram 
+14.design principle - must answers with examples
+15.what is idempotency for payment gateway example and how to deal with regarding payment success
+or not 
+16.  file system handling it goes incresed day by day then how can I deal with it 
+17. in jenkins 404 happnes we got from end users/client on production then what steps we gonna do 
+18. instead of JWT which authentication and authorization services you used? 
+19. fastapi middleware , use multiple middlewares then how it is executed top-bottom or bottom-top 
+20. what is router and use of it.
+21. unittest and pytest.
+22. lambda funtion - map,filter and reduce
+23. sort list without sort method in python 
+24. set operation functions and use cases
+25. nums = [2,7,11,15,3,6] target = 20
+26. what is use of pydantic models in fastapi 
+
+sql - 
+ group by
+ self table 
+ 2nd or third highest salary 
+ diff between in and between 
+ what is unique,primary,foreign key and composite key
+
+k8s
+my kubernetes cluster goes 95% up then how can I deal with it 
+some power outages happnes during production as a backend developer or infrastructure developer what steps we gonna do instead of ALB  
+1. schenario based questions regarding pod failed, crashbackoff,oomkilled error.
+2. if my application working on local but failed in production.
+3. my application working in production but suddenly request goes up and stop application responding
+how will you track it solve it 
+4. explain 4 golder offers 
+6. what is RED and use - RATE,ERROR,   -Utility,S-how much resource taking load,E- 
+7. what is elastic search and opensearch with and realtime example and indexing,documents related
+8. kubernetes structure
+9. 
+
+djangot 
+1.middleware and custom middleware
+2.mixing 
+3.routers 
+4.authentication and authorization
+5.what is 0Auth,Auth2 
+6.serialization
+7
+
+
+aws
+which aws services for maintaining environment variables
+
+ ''''
+
+
+
 # Company ASked
 '''
 

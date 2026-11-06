@@ -121,6 +121,17 @@ lst = ['a','b',['e','f'],'g',['h']]
 # dict = {0:'a',1:'b',2:{0:'e',1:'f'},3:'g',4:{0:'h'}}
 print(lst_to_dct(lst))
 
+
+lst = ['a','b',['e','f'],'g',['h']]
+l=[]
+for i in lst:
+    if isinstance(i,list):
+        l.extend(i)
+    else:
+        l.append(i)
+print(l) # [a,b,e,f,g,h]
+# 
+
 # factorial 
 def fact(n):
     if n==1:
